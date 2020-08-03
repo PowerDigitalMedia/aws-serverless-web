@@ -1,0 +1,24 @@
+{
+    "Version": "2008-10-17",
+    "Id": "S3PolicyId1",
+    "Statement": [
+        {
+            "Sid": "IPAllow",
+            "Effect": "Allow",
+            "Principal": {
+                "AWS": "*"
+            },
+            "Action": "s3:*",
+            "Resource": "arn:aws:s3:::SOME_BUCKET_NAME/*",
+            "Condition": {
+                "IpAddress": {
+                    "aws:SourceIp": [
+                        "22.12.122.22/32",
+                        "55.15.155.55/32"
+        
+                    ]
+                }
+            }
+        }
+    ]
+}

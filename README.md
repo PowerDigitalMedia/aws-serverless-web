@@ -1,14 +1,6 @@
 
-# Serverless Web
+# AWS Serverless Web
 
-
-## Links
-
-https://docs.aws.amazon.com/apigateway/latest/developerguide/api-gateway-payload-encodings-configure-with-console.html
-
-
-
-<br/>
 
 ## API Gateway/Lambda - NodeJS Express Application
 
@@ -27,12 +19,4 @@ https://docs.aws.amazon.com/apigateway/latest/developerguide/api-gateway-payload
 
 ### `( FOLDER: bucket-policies )`
 
-- contains bucket policies for various configurations
-
-<br/>
-
-### `( FOLDER: setup )`
-
-- contains setup instructions for various AWS 
-
-# aws-serverless-web
+- contains bucket policies for various configuration

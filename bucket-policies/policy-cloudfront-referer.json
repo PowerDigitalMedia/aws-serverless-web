@@ -1,0 +1,19 @@
+
+{
+    "Version": "2012-10-17",
+    "Id": "Http Referer Policy",
+    "Statement": [
+        {
+            "Sid": "AllowFromHttpReferer",
+            "Effect": "Allow",
+            "Principal": "*",
+            "Action": "s3:GetObject",
+            "Resource": "arn:aws:s3:::SOME_BUCKET_NAME/*",
+            "Condition": {
+                "StringLike": {
+                    "aws:Referer": "http://powerdigitalmedia.com"
+                }
+            }
+        }
+    ]
+}

@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Error</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+
+    
+<style type="text/css">
+
+    
+/*STYLESHEET*/
+  
+/*
+HTML, BODY
+***************************************/
+html, body {
+	background-color: #fcfcfc;
+	/*background-image:url(images/GrayToBlackGradient.jpg);
+	background-repeat: no-repeat;*/
+	min-width:900px;
+	width:100%;
+	margin: 0 0 0 0; /* to avoid margins */
+	text-align: center; /* to correct the centering IE bug*/
+	/*You will then need to realign your text within the container, which is:*/
+        
+	font-family:Verdana, Arial, Helvetica, sans-serif;
+	font-size:13px;
+	font-weight:normal;
+	color:#CCC;
+}
+
+
+
+
+/*
+WRAPPER
+***************************************/
+.wrapper{
+	/*background-color: #00FF00;
+	background-image:url(../../images/logo_grillsymbol_l.jpg);
+	background-repeat:no-repeat;*/
+	width:400px;
+	
+	/*padding:0 0 0 0;top right bottom left*/
+	margin:auto;/*0 0 0 0; top right bottom left*/
+	/*float:left;*/
+
+}
+
+
+
+/*
+EXTERNAL LINKS
+***************************************/
+.externallinks{
+	width:100%;
+	padding:0 0 0 0;/*top right bottom left*/
+	margin:22px 0 0 0; /*top right bottom left*/
+	float:left;
+
+	font-family:Verdana, Arial, Helvetica, sans-serif;
+	font-size:13px;
+	font-weight:bold;
+	color:#CCC;
+	text-align:left;/* need to have set when setting color*/
+}
+a.xlink:link { color: #CCCCCC; text-decoration: none}
+a.xlink:active { color: #CCCCCC; text-decoration: none}
+a.xlink:visited { color: #CCCCCC; text-decoration: none}
+a.xlink:hover { color:#09F; text-decoration: underline }
+
+
+
+
+
+
+.formStyle{
+	/*background-color:#CF3;*/
+	width:100%;
+	height:auto;
+	padding:0 0 0 0;/*top right bottom left*/
+	margin:0 0 0 0;
+
+	font-family:Tahoma, Geneva, sans-serif;
+	font-size:30px;
+	font-weight:normal;
+	color:#CCC;
+	text-align:center;/* need to have set when setting color*/
+}
+
+.inputStyle{
+	/*background-color:#CF3;*/
+	width:200px;
+	height:30px;
+	padding:0 0 0 0;/*top right bottom left*/
+	margin:0 0 0 0;
+
+	font-family:"Times New Roman", Times, serif;
+	font-size:20px;
+	font-weight:normal;
+	color:#000;
+	text-align:center;/* need to have set when setting color*/
+}
+
+
+
+.badge{
+
+    /*
+    background-color:lightyellow;
+    border:1px solid orangered;
+    */
+
+    width:99%;
+    height:auto;
+
+    margin:25px 0 0 0;
+    padding:15px 0 15px 1%;
+
+    font-family:Tahoma, Geneva, sans-serif;
+    font-size:14px;
+    font-weight:normal;
+    color:#fff;
+    text-align:center;
+
+}
+
+
+    .badge .title{
+
+        background-color:transparent;
+        width:100%;
+        height:auto;
+
+        margin:5px 0 5px 0;
+        padding:0 0 4px 0;
+
+        font-family:Tahoma, Geneva, sans-serif;
+        font-size:20px;
+        font-weight:normal;
+        color:#000;
+        text-align:center;
+
+    }
+
+
+    .badge .description{
+
+        background-color:transparent;
+        width:100%;
+        height:auto;
+
+        margin:5px 0 5px 0;
+        padding:0 0 4px 0;
+
+        font-family:Tahoma, Geneva, sans-serif;
+        font-size:16px;
+        font-weight:normal;
+        color:#000;
+        text-align:center;
+
+    }
+
+
+
+    .badge .button{
+
+        background-color:#0291cd;
+        width:150px;
+        height:auto;
+
+        margin:20px 0 5px 0;
+        padding:10px 0 10px 0;
+
+        font-family:Tahoma, Geneva, sans-serif;
+        font-size:16px;
+        font-weight:normal;
+        color:#fff;
+        text-align:center;
+
+        border:1px solid #0291cd;
+        border-radius:7px;
+
+        cursor:pointer;
+
+    }
+
+
+
+
+
+
+</style>
+
+<script type="text/javascript">
+
+
+
+
+    function ReturnToSite(){
+
+  
+        var href = window.location.href;                //returns the href (URL) of the current page
+        var host = window.location.host;                //returns the domain with port number
+        var hostname = window.location.hostname;        //returns the domain name of the web host
+        var pathname = window.location.pathname;        //returns the path and filename of the current page
+        var protocol = window.location.protocol;        //returns the web protocol used (http: or https:)
+        var assign = window.location.assign;            //loads a new document
+
+
+        var http_domain = protocol + "//" + hostname + "/";
+        window.location.replace(http_domain);
+
+    };
+
+
+
+    function Initialize(){
+
+
+        var badge = document.getElementById('badge');
+        var title = document.getElementById('title');
+        var description = document.getElementById('description');
+        var button = document.getElementById('button');
+
+        var button_marl = (badge.offsetWidth - button.offsetWidth)/2;
+        button.style.marginLeft = button_marl + "px";
+
+
+    };
+
+
+
+    window.onload = function() {
+
+        Initialize();
+
+        
+    }//
+
+
+
+    function Window_Refresh(){
+
+        //alert("Window Refreshed");
+        var sURL = window.location.pathname;
+        window.location.replace(sURL);
+        
+    };
+
+
+</script>
+</head>
+<body>
+
+
+   
+    <div class="wrapper">
+
+        <div class="badge" id='badge'>
+
+            <div class='title' id='title'>Page Error</div>
+    
+            <div class='description' id='description'>Something Went Wrong</div>
+            
+            <div class='button' id='button' onclick="ReturnToSite();"">Return To Site</div>
+    
+        </div>
+
+    </div>
+
+
+
+</body>
+</html>

@@ -1,0 +1,59 @@
+AWSTemplateFormatVersion: '2010-09-09'
+Transform: AWS::Serverless-2016-10-31
+Description: >
+    express-sample
+
+    SAM Template
+
+# More info about Globals: https://github.com/awslabs/serverless-application-model/blob/master/docs/globals.rst
+Globals:
+    Function:
+        Timeout: 10
+
+
+
+Resources:
+
+    ExpressSample:
+
+        Type: AWS::Serverless::Function # More info about Function Resource: https://github.com/awslabs/serverless-application-model/blob/master/versions/2016-10-31.md#awsserverlessfunction
+        Properties:
+            CodeUri: ./
+            Handler: lambda.handler
+
+
+            Runtime: nodejs12.x
+            Environment: # More info about Env Vars: https://github.com/awslabs/serverless-application-model/blob/master/versions/2016-10-31.md#environment-object
+                Variables:
+                    PARAM1: VALUE
+
+            Events:
+
+                ExpressSampleAPIRoot:
+                    Type: Api # More info about API Event Source: https://github.com/awslabs/serverless-application-model/blob/master/versions/2016-10-31.md#api
+                    Properties:
+                        Path: /
+                        Method: ANY
+
+                ExpressSampleAPI:
+                    Type: Api # More info about API Event Source: https://github.com/awslabs/serverless-application-model/blob/master/versions/2016-10-31.md#api
+                    Properties:
+                        Path: /{proxy+}
+                        Method: ANY
+
+
+
+
+Outputs:
+
+    ExpressSampleAPI:
+        Description: "API Gateway endpoint URL for Prod stage"
+        Value: !Sub "https://${ServerlessRestApi}.execute-api.${AWS::Region}.amazonaws.com/Prod/"
+
+    ExpressSample:
+        Description: "TM Sample Express Lambda Function ARN"
+        Value: !GetAtt ExpressSample.Arn
+
+    ExpressSampleIamRole:
+        Description: "Implicit IAM Role created for TM Express function"
+        Value: !GetAtt ExpressSample.Arn
