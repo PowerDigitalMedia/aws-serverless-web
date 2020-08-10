@@ -5,18 +5,16 @@
 ## API Gateway/Lambda - NodeJS Express Application
 
 
-### `( FOLDER: api-gateway-lambda-express )`
+#### `( FOLDER: api-gateway-lambda-express )`
 
-- basic document tree for deployment 
+* basic document tree for deployment 
 
-<br/>
 
-### `( FOLDER: bucket-website )`
+#### `( FOLDER: bucket-website )`
 
-- basic document tree to create a basic AWS bucket website 
+* basic document tree to create a basic AWS bucket website 
 
-<br/>
 
-### `( FOLDER: bucket-policies )`
+#### `( FOLDER: bucket-policies )`
 
-- contains bucket policies for various configuration
+* contains bucket policies for various configuration
