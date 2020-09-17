@@ -3,8 +3,6 @@
 module.exports=function(app)
 {
 
-
-
     app.post('/ajaxd', function (req, res) {
 
 
