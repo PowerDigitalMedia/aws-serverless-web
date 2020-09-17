@@ -2,16 +2,13 @@
 const async = require('async');
 
 
-
 module.exports=function(app)
 {
-
-
 
     app.post('/fetch-page-data', function (req, res) {
 
 
-        console.log("============== fetch-page-data ================");
+        console.log("========== fetch-page-data ============");
     
         console.log("STATUS CODE: "+res.statusCode);
         console.log("BODY: "+req.body);
@@ -31,10 +28,6 @@ module.exports=function(app)
     
         console.log("AJAX OBJ: "+JSON.stringify(ajaxObj, null, 2));
     
-    
-    
-
-  
 
 
         var ob = {};

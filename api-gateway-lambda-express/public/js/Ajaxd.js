@@ -1,8 +1,3 @@
-//########################################################################################
-//########################################################################################
-//########################################################################################
-//ALTER
-
 
 function Ajaxd(_VARS){
     
@@ -15,49 +10,20 @@ function Ajaxd(_VARS){
     var port =  window.location.port;
 
 
-    /*
-    alert(
-        "HREF         : "+href
-        +"\nHOSTNAME  : "+hostname
-        +"\nPATHNAME  : "+pathname
-        +"\nPROTOCOL  : "+protocol
-        +"\nASSIGN    : "+assign
-    );
-    */
-
-
-    //====================================================
-
     if(!_VARS || _VARS == undefined)
     {
         var _VARS = {
                     'call':'init'
                     };
 
-    }//#
+    }
 
-    //====================================================
-
-    //alert("PORT: "+port);
 
     if(hostname == 'localhost') var hostname = hostname+":"+port;
-
     if(hostname.match(/amazonaws/g)) var hostname =  hostname + '/Prod';
 
-
-
     var http_domain = protocol + "//" + hostname + "/";
-    var url = http_domain + 'ajaxd';
-
-    //====================================================
-
-    //alert("URL: "+url);
-    
-
-    //====================================================
-    //SET AJAX POST
-    //====================================================
-        
+    var url = http_domain + 'ajaxd'; 
     var ajaxPost = "";
         
         var splitter = "-|AJXPST|-";
@@ -66,39 +32,6 @@ function Ajaxd(_VARS){
         ajaxPost += "ajaxArr[]=" + nv + "&";
 
 
-
-    //======================================================
-    //CHECK AJAX POST
-    //======================================================
-/*
-
-    var alrt = "";
-        
-        HideComp_AlfaBase();
-        
-        alrt += "\n=========== FETCH ==========\n";
-            
-        var regi = ajaxPost;
-        var regi = regi.replace(/ajaxArr\[\]\=/g,"\n");
-        var regi = regi.replace(/\-\|AJXPST\|\-/g," === ");
-                
-        alrt += regi;
-            
-    alert(alrt);
-    //return false;
-    
-*/
-    //=====================================================
-        
-
-
-
-
-    
-    //=====================================================
-    //AJAX REQUEST
-    //=====================================================
-    
     var xmlhttp = new XMLHttpRequest();
     xmlhttp.open("POST", url, true);//asynchronous
     xmlhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
@@ -120,8 +53,7 @@ function Ajaxd(_VARS){
 
     
     
-}//func
-//=====
+}
 
 
 
